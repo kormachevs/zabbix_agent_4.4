@@ -24,7 +24,7 @@ https://www.zabbix.com/documentation/current/ru/manual/installation/install_from
 
 Запуск плейбука:
  
- ansible-playbook zabbix-agent-playbook.yaml
+    ansible-playbook zabbix-agent-playbook.yaml
 
 
 Тестировал роль на OS: Ubuntu 16.04 + Ubuntu 18.04
