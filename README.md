@@ -11,14 +11,15 @@ ansible --version = ansible 2.9.6
 ## Zabbix пакеты репозитория качаются с оф. сайта repo.zabbix.com, согласно рекомендациям...
 https://www.zabbix.com/documentation/current/ru/manual/installation/install_from_packages/debian_ubuntu
 
-Если нужно поправить только файл конфигурации, дотасточно закомментировать -include: pkg.yaml в файле ./zabbix-agent/tasks/main.yml
+Если нужно поправить только файл конфигурации, дотасточно передать значение False переменной zabbix_agent_install_agent: True или поправить в playbook-е:
+
+   zabbix_agent_install_agent: False
 
 Переменные Server и SeerverActive устанавливаются в файле zabbix-agent-playbook.yaml
 
     zabbix_agent_server: 192.168.33.30
     zabbix_agent_serveractive: 192.168.33.30
 
-Что касается переменной Hostname, вероятно её значение необходимо брать из фактов собираемых на конкретном хосте. Но у меня нет точной информации каким образом оно формируется. 
-Поэтому я вынес переменную в файл ./hosts, если переменная указана для хоста, то ее значение будет подствляться в файл конфигурации.
+Hostname = ansible_hostname
 
 Тестировал роль на OS: Ubuntu 16.04 + Ubuntu 18.04

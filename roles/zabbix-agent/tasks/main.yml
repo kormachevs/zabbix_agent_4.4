@@ -1,3 +1,4 @@
 ---
 - include: pkg.yaml
+  when: zabbix_agent_install_agent | bool == True
 - include: configure.yaml

@@ -17,6 +17,5 @@
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       regexp: '^Hostname='
-      line: "Hostname={{ zabbix_agent_hostname }}"
-    when: zabbix_agent_hostname is defined
+      line: "Hostname={{ ansible_hostname }}"
     notify: restart-zabix-agent

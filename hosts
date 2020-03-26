@@ -1,5 +1,6 @@
 [ubnt16]
 192.168.99.106 zabbix_agent_hostname="TestHostName"
+192.168.33.10
 
 [ubnt18]
 192.168.99.107
