@@ -13,6 +13,15 @@ https://www.zabbix.com/documentation/current/ru/manual/installation/install_from
 
 Если нужно поправить только файл конфигурации, дотасточно закомментировать -include: pkg.yaml в файле ./zabbix-agent/tasks/main.yml
 
+├── roles
+│   └── zabbix-agent
+│       ├── handlers
+│       │   └── main.yml
+│       └── tasks
+│           ├── configure.yaml
+│           ├── main.yml
+│           └── pkg.yaml
+
 Переменные Server и SeerverActive устанавливаются в файле zabbix-agent-playbook.yaml
 
     zabbix_agent_server: 192.168.33.30
