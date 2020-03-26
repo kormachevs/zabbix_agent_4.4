@@ -1,8 +1,9 @@
  Ansible установка zabbix-agent v4.4 на ubuntu
 # Подготовка...
-Устанавливаем, обновляем пакеты ansible. Т.к в большинстве репозитариев Unix OS версия ansible достаточно старая, устанавливал/обновлял с помощью pip
+Устанавливаем, обновляем пакеты ansible(на управляющем хосте). Т.к в большинстве репозитариев Unix OS версия ansible достаточно старая, устанавливал/обновлял с помощью pip
 
 apt install python-pip
+
 pip install ansible -U
 
 Текущая версия:
@@ -21,5 +22,10 @@ https://www.zabbix.com/documentation/current/ru/manual/installation/install_from
     zabbix_agent_serveractive: 192.168.33.30
 
 Hostname = ansible_hostname
+
+Запуск плейбука:
+ 
+    ansible-playbook zabbix-agent-playbook.yaml
+
 
 Тестировал роль на OS: Ubuntu 16.04 + Ubuntu 18.04
