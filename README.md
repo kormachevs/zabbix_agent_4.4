@@ -3,6 +3,7 @@
 Устанавливаем, обновляем пакеты ansible. Т.к в большинстве репозитариев Unix OS версия ansible достаточно старая, устанавливал/обновлял с помощью pip
 
 apt install python-pip
+
 pip install ansible -U
 
 Текущая версия:
