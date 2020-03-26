@@ -8,16 +8,8 @@ pip install ansible -U
 Текущая версия:
 ansible --version = ansible 2.9.6
 
-### Zabbix пакеты репозитория качаются с оф. сайта repo.zabbix.com, согласно рекомендациям...
+## Zabbix пакеты репозитория качаются с оф. сайта repo.zabbix.com, согласно рекомендациям...
 https://www.zabbix.com/documentation/current/ru/manual/installation/install_from_packages/debian_ubuntu
-.
-└── zabbix-agent
-    ├── handlers
-    │   └── main.yml
-    └── tasks
-        ├── configure.yaml
-        ├── main.yml
-        └── pkg.yaml
 
 Если нужно поправить только файл конфигурации, дотасточно закомментировать -include: pkg.yaml в файле ./zabbix-agent/tasks/main.yml
 
