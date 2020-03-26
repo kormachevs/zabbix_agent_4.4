@@ -12,9 +12,9 @@ ansible --version = ansible 2.9.6
 ## Zabbix пакеты репозитория качаются с оф. сайта repo.zabbix.com, согласно рекомендациям...
 https://www.zabbix.com/documentation/current/ru/manual/installation/install_from_packages/debian_ubuntu
 
-Если нужно поправить только файл конфигурации, дотасточно передать значение False переменной zabbix_agent_install_agent: True или поправить в playbook-е:
+Если нужно поправить только файл конфигурации, дотасточно передать значение False переменной zabbix_agent_install_agent или поправить в playbook-е:
 
-   zabbix_agent_install_agent: False
+    zabbix_agent_install_agent: False
 
 Переменные Server и SeerverActive устанавливаются в файле zabbix-agent-playbook.yaml
 
