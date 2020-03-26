@@ -1,0 +1,5 @@
+[ubnt16]
+192.168.99.106 zabbix_agent_hostname="TestHostName"
+
+[ubnt18]
+192.168.99.107

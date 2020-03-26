@@ -1,0 +1,10 @@
+---
+- name: Zabbix-agent install
+  hosts: all
+  become_method: sudo
+  become: yes
+  vars:
+    zabbix_agent_server: 192.168.33.30
+    zabbix_agent_serveractive: 192.168.33.30
+  roles:
+    - zabbix-agent

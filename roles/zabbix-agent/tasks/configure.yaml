@@ -1,0 +1,22 @@
+---
+  - name: Replace a Server entry with our zabbix-agent.conf file
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      regexp: '^Server='
+      line: "Server={{ zabbix_agent_server }}"
+    notify: restart-zabix-agent
+
+  - name: Replace a ServerActive entry with our zabbix-agent.conf file
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      regexp: '^ServerActive='
+      line: "ServerActive={{ zabbix_agent_serveractive }}"
+    notify: restart-zabix-agent
+
+  - name: Replace a Hostname entry with our zabbix-agent.conf file if variable is defined
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      regexp: '^Hostname='
+      line: "Hostname={{ zabbix_agent_hostname }}"
+    when: zabbix_agent_hostname is defined
+    notify: restart-zabix-agent
